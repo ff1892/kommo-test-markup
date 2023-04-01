@@ -3,6 +3,7 @@
   &__title {
     @include typography($ff-inter, $fs-huge, $fw-regular);
     max-width: 380px;
+    margin: 0;
     margin-bottom: 30px;
 
     @include breakpoint(tablet) {

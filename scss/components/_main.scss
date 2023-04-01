@@ -6,7 +6,6 @@
     flex-direction: column;
   }
 
-
   &__hero {
     @include breakpoint(tablet) {
       margin-bottom: 20px;

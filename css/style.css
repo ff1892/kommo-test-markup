@@ -96,8 +96,14 @@ p, h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-display: swap;
 }
+*, *::before, *::after {
+  z-index: 2;
+}
+
 .page {
   background-color: #1E1E1E;
+  z-index: 1;
+  position: relative;
 }
 .page__wrapper {
   display: flex;
@@ -105,11 +111,13 @@ p, h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   max-width: 1140px;
   padding: 50px 30px 20px;
-  margin-inline: auto;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 31.25em) {
   .page__wrapper {
-    padding: 0 14px 15px;
+    padding: 0;
+    padding-bottom: 15px;
+    align-items: stretch;
   }
 }
 .page__header {
@@ -118,13 +126,12 @@ p, h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 31.25em) {
   .page__header {
     margin: 0;
-    padding-block: 20px;
+    padding: 20px 14px;
   }
 }
 .page__main {
   flex-grow: 1;
   padding-bottom: 100px;
-  margin-bottom: 20px;
 }
 @media only screen and (max-width: 46.25em) {
   .page__main {
@@ -133,9 +140,11 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 @media only screen and (max-width: 31.25em) {
   .page__main {
-    padding-bottom: 60px;
-    padding-top: 100px;
+    padding: 100px 14px 60px;
   }
+}
+.page__footer {
+  padding: 20px 14px 0;
 }
 
 .orange-grad {
@@ -160,6 +169,7 @@ p, h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 31.25em) {
   .header {
     background-color: #1E1E1E;
+    z-index: 3;
     display: block;
     position: fixed;
     width: 100%;
@@ -328,6 +338,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   color: #E4E5EA;
   max-width: 380px;
+  margin: 0;
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 46.25em) {
@@ -384,6 +395,12 @@ p, h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+@media only screen and (max-width: 31.25em) {
+  .consult__title--bold {
+    text-transform: lowercase;
+    letter-spacing: 0;
+  }
 }
 .consult__list {
   padding: 0;
@@ -478,13 +495,18 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media only screen and (max-width: 31.25em) {
+  .footer {
+    background-color: #1E1E1E;
+  }
+}
 .footer__wrapper {
   display: flex;
   margin-bottom: 33px;
 }
 @media only screen and (max-width: 46.25em) {
   .footer__wrapper {
-    flex-direction: column;
+    display: block;
   }
 }
 .footer__about {
@@ -628,6 +650,83 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   font-weight: 400;
   color: #E4E5EA;
+}
+
+.red-light {
+  width: 311px;
+  height: 311px;
+  background-color: #961A1A;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  top: 250px;
+  filter: blur(392px);
+}
+
+.purple-light {
+  width: 259px;
+  height: 259px;
+  background-color: #833AB4;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(0, -50%);
+  left: 40%;
+  z-index: 0;
+  filter: blur(392px);
+}
+@media only screen and (max-width: 31.25em) {
+  .purple-light {
+    transform: translate(10%, 80%);
+    width: 100px;
+    height: 100px;
+    filter: blur(100px);
+  }
+}
+
+.red-ball {
+  opacity: 0.7;
+  position: absolute;
+  width: 83px;
+  height: 83px;
+  left: 38%;
+  top: 83px;
+  border-radius: 50%;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  backdrop-filter: blur(2px);
+}
+
+.red-ball--small {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 57%;
+  top: 547px;
+  border-radius: 50%;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  filter: blur(2.5px);
+  backdrop-filter: blur(2px);
+}
+
+.purple-ball {
+  overflow: hidden;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 60%;
+  top: -2px;
+  border-radius: 50%;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+  filter: blur(5px);
+  backdrop-filter: blur(2px);
+}
+@media only screen and (max-width: 31.25em) {
+  .purple-ball {
+    top: 400px;
+    left: 80%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

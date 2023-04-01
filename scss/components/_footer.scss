@@ -1,11 +1,15 @@
 .footer {
 
+  @include breakpoint(mobile) {
+    background-color: $bg-dark;
+  }
+
   &__wrapper {
     display: flex;
     margin-bottom: 33px;
 
     @include breakpoint(tablet) {
-      flex-direction: column;
+      display: block;
     }
   }
 

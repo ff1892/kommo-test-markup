@@ -21,6 +21,11 @@
       -webkit-text-fill-color: transparent;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
+
+      @include breakpoint(mobile) {
+        text-transform: lowercase;
+        letter-spacing: 0;
+      }
     }
 
   }
