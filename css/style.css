@@ -56,48 +56,48 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @font-face {
   font-family: "Inter";
-  src: url("../../fonts/Inter-Regular.woff2") format("woff2"), url("../../fonts/Inter-Regular.woff") format("woff");
+  src: url("/fonts/Inter-Regular.woff2") format("woff2"), url("/fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../../fonts/Inter-Medium.woff2") format("woff2"), url("../../fonts/Inter-Medium.woff") format("woff");
+  src: url("/fonts/Inter-Medium.woff2") format("woff2"), url("/fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../../fonts/Inter-Bold.woff2") format("woff2"), url("../../fonts/Inter-Bold.woff") format("woff");
+  src: url("/fonts/Inter-Bold.woff2") format("woff2"), url("/fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../../fonts/Inter-Black.woff2") format("woff2"), url("../../fonts/Inter-Black.woff") format("woff");
+  src: url("/fonts/Inter-Black.woff2") format("woff2"), url("/fonts/Inter-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Light.woff2") format("woff2"), url("../../fonts/Montserrat-Light.woff") format("woff");
+  src: url("/fonts/Montserrat-Light.woff2") format("woff2"), url("/fonts/Montserrat-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Regular.woff") format("woff2"), url("../../fonts/Montserrat-Regular.woff.woff") format("woff");
+  src: url("/fonts/Montserrat-Regular.woff") format("woff2"), url("/fonts/Montserrat-Regular.woff.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 *, *::before, *::after {
-  z-index: 2;
+  z-index: 3;
 }
 
 .page {
@@ -140,7 +140,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 @media only screen and (max-width: 31.25em) {
   .page__main {
-    padding: 100px 14px 60px;
+    z-index: 1;
+    padding: 100px 14px 40px;
   }
 }
 .page__footer {
@@ -251,8 +252,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 @media only screen and (max-width: 31.25em) {
   .nav__item:not(:last-child) {
-    flex-grow: 1;
-    flex-shrink: 0;
     margin: 0;
   }
 }
@@ -326,6 +325,12 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
   }
 }
+@media only screen and (max-width: 31.25em) {
+  .main {
+    background-image: url(/img/noise.png);
+    background-size: cover;
+  }
+}
 @media only screen and (max-width: 46.25em) {
   .main__hero {
     margin-bottom: 20px;
@@ -393,8 +398,7 @@ p, h1, h2, h3, h4, h5, h6 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  color: #FCB045;
 }
 @media only screen and (max-width: 31.25em) {
   .consult__title--bold {
@@ -492,6 +496,11 @@ p, h1, h2, h3, h4, h5, h6 {
   .consult__button {
     font-size: small;
     padding: 13px 25px;
+  }
+}
+@media only screen and (max-width: 31.25em) and (max-width: 31.25em) {
+  .consult__button {
+    display: none !important;
   }
 }
 
@@ -652,6 +661,11 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #E4E5EA;
 }
 
+.balls {
+  position: relative;
+  overflow-x: clip;
+}
+
 .red-light {
   width: 311px;
   height: 311px;
@@ -669,22 +683,19 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: #833AB4;
   border-radius: 50%;
   position: absolute;
-  transform: translate(0, -50%);
   left: 40%;
+  transform: translate(0, -50%);
   z-index: 0;
   filter: blur(392px);
 }
 @media only screen and (max-width: 31.25em) {
   .purple-light {
-    transform: translate(10%, 80%);
-    width: 100px;
-    height: 100px;
-    filter: blur(100px);
+    transform: translate(70%, 80%);
   }
 }
 
 .red-ball {
-  opacity: 0.7;
+  opacity: 0.5;
   position: absolute;
   width: 83px;
   height: 83px;
@@ -695,18 +706,30 @@ p, h1, h2, h3, h4, h5, h6 {
   box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
   backdrop-filter: blur(2px);
 }
+@media only screen and (max-width: 31.25em) {
+  .red-ball {
+    display: none;
+  }
+}
 
 .red-ball--small {
   position: absolute;
   width: 28px;
   height: 28px;
   left: 57%;
-  top: 547px;
+  top: 540px;
   border-radius: 50%;
   background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%);
   box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
   filter: blur(2.5px);
   backdrop-filter: blur(2px);
+}
+@media only screen and (max-width: 31.25em) {
+  .red-ball--small {
+    top: 510px;
+    left: 10%;
+    filter: blur(3px);
+  }
 }
 
 .purple-ball {

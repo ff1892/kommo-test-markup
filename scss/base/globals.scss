@@ -1,5 +1,5 @@
 *, *::before, *::after {
-  z-index: 2;
+  z-index: 3;
 }
 
 .page {
@@ -40,7 +40,8 @@
     }
 
     @include breakpoint(mobile) {
-      padding: 100px 14px 60px;
+      z-index: 1;
+      padding: 100px 14px 40px;
     }
   }
 

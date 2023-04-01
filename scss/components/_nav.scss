@@ -19,8 +19,6 @@
     margin-right: 30px;
 
     @include breakpoint(mobile) {
-      flex-grow: 1;
-      flex-shrink: 0;
       margin: 0;
     }
   }

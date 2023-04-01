@@ -19,8 +19,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      -webkit-box-decoration-break: clone;
-      box-decoration-break: clone;
+      color: $orange;
 
       @include breakpoint(mobile) {
         text-transform: lowercase;
@@ -115,6 +114,7 @@
     @include breakpoint(mobile) {
       font-size: small;
       padding: 13px 25px;
+      @include hide(mobile)
     }
 
 
