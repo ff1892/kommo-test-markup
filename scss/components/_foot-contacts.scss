@@ -1,6 +1,10 @@
 .foot-contacts {
   text-align: right;
 
+  @include breakpoint(tablet) {
+    text-align: left;
+  }
+
   &__title {
     text-transform: uppercase;
     @include typography($ff-inter, $fs-semi-regular, $fw-bold, $text-grey);

@@ -17,11 +17,26 @@
     grid-column-gap: 50px;
   }
 
+  &__item--thank {
+    @include breakpoint(mobile) {
+      grid-row: 1/2;
+      grid-column: 2/3;
+    }
+  }
+
   &__link {
     @include link($ff-inter, $fs-regular, $fw-regular);
 
+    @include breakpoint(mobile) {
+      font-size: $fs-semi-regular;
+    }
+
     span {
       @include link($ff-inter, $fs-regular, $fw-regular);
+
+      @include breakpoint(mobile) {
+        font-size: $fs-semi-regular;
+      }
     }
   }
 }

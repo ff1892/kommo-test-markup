@@ -3,16 +3,45 @@
   flex-wrap: wrap;
   align-items: start;
 
+  @include breakpoint(tablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include breakpoint(mobile) {
+    background-color: $bg-dark;
+    display: block;
+    position: fixed;
+    width: 100%;
+  }
+
   &__logo {
     margin-right: 53px;
     padding-bottom: 15px;
+
+    @include breakpoint(tablet) {
+      margin: 0;
+    }
+
+    @include hide(mobile);
   }
 
   &__nav {
     padding-bottom: 15px;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 0;
+    }
   }
 
   &__contacts {
     margin-left: auto;
+
+    @include breakpoint(tablet) {
+      margin: 0;
+    }
+
+    @include hide(mobile);
   }
 }

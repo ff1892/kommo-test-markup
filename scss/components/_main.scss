@@ -1,4 +1,15 @@
 .main {
   display: flex;
   justify-content: space-between;
+
+  @include breakpoint(tablet) {
+    flex-direction: column;
+  }
+
+
+  &__hero {
+    @include breakpoint(tablet) {
+      margin-bottom: 20px;
+    }
+  }
 }

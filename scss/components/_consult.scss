@@ -1,6 +1,10 @@
 .consult {
   text-align: right;
 
+  @include breakpoint(tablet) {
+    text-align: left;
+  }
+
   &__title {
     margin-bottom: 40px;
 
@@ -28,14 +32,48 @@
     grid-gap: 30px;
     grid-template-columns: repeat(2, 138px);
     margin-bottom: 60px;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 30px;
+    }
   }
 
   &__list--desktop {
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__list--mobile {
     display: none;
+
+    @include breakpoint(mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      grid-template-rows: repeat(2, auto);
+      grid-auto-flow: column;
+      text-transform: uppercase;
+      @include typography($ff-montserrat, $fs-small, $fw-regular);
+    }
+
+    .consult__item {
+      padding-left: 15px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 8px;
+        left: 0;
+        height: 1px;
+        width: 10px;
+        background-image: $gradient-bright;
+      }
+    }
   }
+
+
 
   &__item {
     padding: 0;
@@ -67,6 +105,11 @@
 
     &:hover {
       background-color: darken($blue, 10%);
+    }
+
+    @include breakpoint(mobile) {
+      font-size: small;
+      padding: 13px 25px;
     }
 
 

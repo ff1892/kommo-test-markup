@@ -5,6 +5,14 @@
     max-width: 380px;
     margin-bottom: 30px;
 
+    @include breakpoint(tablet) {
+      font-size: $fs-huge-tablet;
+    }
+
+    @include breakpoint(mobile) {
+      max-width: 275px;
+    }
+
     &--bold {
       display: inline-block;
       font-weight: $fw-black;

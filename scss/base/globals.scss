@@ -8,15 +8,34 @@
     max-width: 1140px;
     padding: 50px 30px 20px;
     margin-inline: auto;
+
+    @include breakpoint(mobile) {
+      padding: 0 14px 15px;
+    }
   }
 
   &__header {
     margin-bottom: 75px;
+
+    @include breakpoint(mobile) {
+      margin: 0;
+      padding-block: 20px;
+    }
   }
 
   &__main {
     flex-grow: 1;
-    margin-bottom: 120px;
+    padding-bottom: 100px;
+    margin-bottom: 20px;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 80px;
+    }
+
+    @include breakpoint(mobile) {
+      padding-bottom: 60px;
+      padding-top: 100px;
+    }
   }
 }
 

@@ -3,18 +3,37 @@
   &__wrapper {
     display: flex;
     margin-bottom: 33px;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
   }
 
   &__about {
     margin-right: 98px;
   }
 
+  &__menu {
+
+    @include breakpoint(tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
   &__contacts {
     margin-left: auto;
+
+    @include breakpoint(tablet) {
+      margin: 0;
+    }
   }
 
   &__law {
     text-align: right;
+
+    @include breakpoint(tablet) {
+      text-align: left;
+    }
   }
 
   &__law-copy {
