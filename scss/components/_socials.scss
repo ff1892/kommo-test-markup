@@ -1,0 +1,20 @@
+.socials {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-column-gap: 30px;
+  justify-content: end;
+  margin-bottom: 19px;
+
+  &--footer {
+    grid-column-gap: 12px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    opacity: 0.8;
+  }
+}
+

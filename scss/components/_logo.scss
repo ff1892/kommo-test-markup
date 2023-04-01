@@ -1,0 +1,21 @@
+.logo {
+
+  &__link {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__link:hover {
+    opacity: 0.8;
+  }
+
+  &__motto {
+    max-width: 140px;
+    @include typography($ff-montserrat, $fs-smallest, $fw-light, $text-light);
+
+    abbr {
+      font: inherit;
+      color: $text-light;
+    }
+  }
+  }

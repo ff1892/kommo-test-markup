@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+
+  &__logo {
+    margin-right: 53px;
+    padding-bottom: 15px;
+  }
+
+  &__nav {
+    padding-bottom: 15px;
+  }
+
+  &__contacts {
+    margin-left: auto;
+  }
+}

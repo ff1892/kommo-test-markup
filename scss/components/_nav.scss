@@ -1,0 +1,17 @@
+.nav {
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    @include link($ff-inter, $fs-regular, $fw-medium, $text-light);
+  }
+}

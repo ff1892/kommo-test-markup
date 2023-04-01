@@ -1,0 +1,11 @@
+.head-contacts {
+  display: flex;
+
+  &__phone {
+    @include link($ff-inter, $fs-regular, $fw-regular)
+  }
+
+  &__socials {
+    margin-left: 47px;
+  }
+}

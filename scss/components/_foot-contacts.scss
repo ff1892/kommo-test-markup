@@ -1,0 +1,21 @@
+.foot-contacts {
+  text-align: right;
+
+  &__title {
+    text-transform: uppercase;
+    @include typography($ff-inter, $fs-semi-regular, $fw-bold, $text-grey);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  &__phone {
+    @include link($ff-inter, $fs-regular, $fw-regular);
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__address {
+    font-style: normal;
+    @include typography($ff-inter, $fs-regular, $fw-regular);
+  }
+}

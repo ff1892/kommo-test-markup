@@ -1,0 +1,29 @@
+.page {
+  background-color: $bg-dark;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1140px;
+    padding: 50px 30px 20px;
+    margin-inline: auto;
+  }
+
+  &__header {
+    margin-bottom: 75px;
+  }
+
+  &__main {
+    flex-grow: 1;
+    margin-bottom: 120px;
+  }
+}
+
+.orange-grad {
+  background-image: $gradient-bright;
+
+  &--diag {
+    background-image: $gradient-bright-diagonal;
+  }
+}

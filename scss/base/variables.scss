@@ -1,0 +1,37 @@
+// COLORS
+
+$text-light: #E4E5EA;
+$text-grey: #656566;
+$bg-dark: #1E1E1E;
+$blue: #4077F3;
+$violet: #833AB4;
+$brick: #961A1A;
+$orange: #FCB045;
+$pink: #FF3F78;
+
+$gradient-bright: linear-gradient(to right, $orange 37%, $pink 100%);
+$gradient-bright-diagonal: linear-gradient(135deg, $orange 0%, $orange 30%, $pink 100%);
+
+
+// TYPOGRAPHY
+
+$fs-smallest: 10px;
+$fs-small: 12px;
+$fs-semi-regular: 14px;
+$fs-regular: 16px;
+$fs-medium: 18px;
+$fs-huge: 48px;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-black: 900;
+
+$ff-inter: "Inter", sans-serif;
+$ff-montserrat: "Montserrat", sans-serif;
+
+// BREAKPOINTS
+
+$tablet: 50em;
+$mobile: 31.25em;

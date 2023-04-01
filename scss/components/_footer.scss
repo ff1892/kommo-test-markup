@@ -1,0 +1,36 @@
+.footer {
+
+  &__wrapper {
+    display: flex;
+    margin-bottom: 33px;
+  }
+
+  &__about {
+    margin-right: 98px;
+  }
+
+  &__contacts {
+    margin-left: auto;
+  }
+
+  &__law {
+    text-align: right;
+  }
+
+  &__law-copy {
+    @include typography($ff-montserrat, $fs-small, $fw-light);
+    display: block;
+    margin-bottom: 5px;
+
+    span, time {
+      @include typography($ff-montserrat, $fs-small, $fw-light);
+    }
+  }
+
+  &__law-link {
+    display: block;
+    @include link($ff-montserrat, $fs-small, $fw-light);
+    text-decoration: underline;
+  }
+
+}
